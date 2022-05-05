@@ -1,0 +1,11 @@
+---
+ - hosts: all
+   become: true
+
+   tasks:
+     - name: stoping existing container
+       shell: docker stop mywebcrash2
+     - name: removing the container
+       shell: docker rm mywebcrash2
+     - name: Creating Docker container
+       shell: docker run -d -p 8080:8080 --name mywebcrash2 rituparna1997/mywebcrash2 catalina.sh run
