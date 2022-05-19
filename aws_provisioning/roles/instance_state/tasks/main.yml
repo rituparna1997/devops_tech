@@ -5,8 +5,6 @@
     region: us-east-1
     state: running
     wait: yes
-    aws_access_key: '{{ access_key }}'
-    aws_secret_key: '{{ secret_key }}'
   tags:
     - start
     - never
@@ -16,8 +14,6 @@
     region: us-east-1
     state: stopped
     wait: yes
-    aws_access_key: '{{ access_key }}'
-    aws_secret_key: '{{ secret_key }}'
   tags:
     - stop
     - never
@@ -27,8 +23,6 @@
     region: us-east-1
     state: absent
     wait: yes
-    aws_access_key: '{{ access_key }}'
-    aws_secret_key: '{{ secret_key }}'
   tags:
     - terminate
     - never

@@ -4,5 +4,3 @@
     instance_type: t2.micro
     image: ami-09d56f8956ab235b3
     region: us-east-1
-    aws_access_key: '{{ access_key }}'
-    aws_secret_key: '{{ secret_key }}'
