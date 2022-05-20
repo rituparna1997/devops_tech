@@ -1,7 +1,7 @@
 ---
 - name: instance start ec2 instance
   ec2:
-    instance_ids: {{ instance_id }}
+    instance_ids: '{{ instance_id }}'
     region: us-east-1
     state: running
     wait: yes
@@ -10,7 +10,7 @@
     - never
 - name: instance start ec2 instance
   ec2:
-    instance_ids: {{ instance_id }}
+    instance_ids: '{{ instance_id }}'
     region: us-east-1
     state: stopped
     wait: yes
@@ -19,7 +19,7 @@
     - never
 - name: instance start ec2 instance
   ec2:
-    instance_ids: {{ instance_id }}
+    instance_ids: '{{ instance_id }}'
     region: us-east-1
     state: absent
     wait: yes
