@@ -3,26 +3,5 @@
   ec2:
     instance_ids: '{{ instance_id }}'
     region: us-east-1
-    state: running
+    state: '{{ instance_state }}'
     wait: yes
-  tags:
-    - start
-    - never
-- name: instance start ec2 instance
-  ec2:
-    instance_ids: '{{ instance_id }}'
-    region: us-east-1
-    state: stopped
-    wait: yes
-  tags:
-    - stop
-    - never
-- name: instance start ec2 instance
-  ec2:
-    instance_ids: '{{ instance_id }}'
-    region: us-east-1
-    state: absent
-    wait: yes
-  tags:
-    - terminate
-    - never
