@@ -4,3 +4,5 @@
     instance_type: t2.micro
     image: ami-09d56f8956ab235b3
     region: us-east-1
+    instance_tags:
+      Name: "My-instance"
