@@ -7,6 +7,6 @@
     password: "{{ temp_pass }}"
     access_key_state: create
   loop:
-    - admin
-    - ritu
-    - siv
+    - {{ usr_1 }}
+    - {{ usr_2 }}
+    - {{ usr_3 }}
