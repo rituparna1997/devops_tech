@@ -1,0 +1,12 @@
+---
+- name: Create three new IAM users
+  iam:
+    iam_type: user
+    name: "{{ item }}"
+    state: present
+    password: "{{ temp_pass }}"
+    access_key_state: create
+  loop:
+    - admin
+    - ritu
+    - siv
