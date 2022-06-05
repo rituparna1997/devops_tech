@@ -4,9 +4,7 @@
     iam_type: user
     name: "{{ item.name }}"
     state: present
-    password: "{{ item.password }}"
+    password: "{{ item.password i}}"
     access_key_state: create
-  loop:
-    - { name: "{{ usr_1 }}", password: "{{ pass_1 }}" }
-    - { name: "{{ usr_2 }}", password: "{{ pass_2 }}" }
-    - { name: "{{ usr_3 }}", password: "{{ pass_3 }}" }
+  with_item:
+    - { name: "['ritu0','ritu9']", password: "['Ritu@9988','Ritu@8787']" }
