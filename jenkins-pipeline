@@ -11,3 +11,16 @@ pipeline {
         }
     }
 }
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'cd /var/lib/jenkins/workspace/ec2_-lunch_instance/ansible'
+                sh 'sudo ansible-playbook /var/lib/jenkins/workspace/ec2_-lunch_instance/ansible/lunch_ec2.yml -e "instance_name=[$instance_name]" -e "instance_type=$instance_type" '    
+                
+            }
+        }
+    }
+}
