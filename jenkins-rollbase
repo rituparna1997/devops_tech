@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'cd /var/devops_tech/ansible'
+                sh 'sudo ansible-playbook -i hosts /var/devops_tech/ansible/install-apache.yml -e "own_name=$your_name" '    
+                
+            }
+        }
+    }
+}
